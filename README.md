@@ -43,3 +43,4 @@
     - https://web.stanford.edu/class/msande448/2017/Final/Reports/gr4.pdf
     - https://papers.nips.cc/paper/4910-adaptive-market-making-via-online-learning.pdf
     - http://webee.technion.ac.il/control/info/Projects/Students/2012/Ori%20Gil/Book/Market%20Making%20Article.pdf
+    - https://pdfs.semanticscholar.org/88d3/893855c3b54b0acfd436075122319c1dd518.pdf (has a github repo)
