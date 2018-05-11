@@ -44,3 +44,27 @@
     - https://papers.nips.cc/paper/4910-adaptive-market-making-via-online-learning.pdf
     - http://webee.technion.ac.il/control/info/Projects/Students/2012/Ori%20Gil/Book/Market%20Making%20Article.pdf
     - https://pdfs.semanticscholar.org/88d3/893855c3b54b0acfd436075122319c1dd518.pdf (has a github repo)
+
+
+####
+-  The three components
+
+Order processing costs represent a fee arising from order execution like ad-
+ministrative cost and compensation for the market maker’s time.  
+
+Inventory costs  originate  from  holding  unwanted  risky  securities  in  inventory  by  the
+market maker.  
+
+Adverse selection costs exist due to asymmetric information
+between the market maker and informed traders.  Informed traders are indi-
+viduals who are better informed about the expected price movement of the
+underlying  security.
+
+
+- Early correlation
+
+Negative correlation between the bid-ask spread and security price, trading
+volume  and  market  capitalization.   
+
+On  the  other  hand,  bid-ask  spread  is
+positive correlated with the volatility of the security price.
