@@ -15,7 +15,7 @@
 
 #### DB models
 - txs
-    - bot restarts trades from user's own last filled order or last market tick
+    - bot can restart trades from user's own last filled order (default = last market tick)
 
 ### Optimization
 - Adaptive strategy : Machine learning, prediction model.
