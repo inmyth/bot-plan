@@ -2,9 +2,9 @@
 ## Projects Outlines
 ### Core
 - User Interface
-    UI will only manipulate a json file which is read by the bot during runtime. The bot will be able to run without UI.
+    - UI will only manipulate a json file which is read by the bot during runtime. The bot will be able to run without UI.
 - Expansion to other exchanges
-    Huobi, OkEX, Binance
+    - Huobi, OkEX, Binance
 - Support arbitrage
 - Profit calculation
 
