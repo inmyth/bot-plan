@@ -6,11 +6,11 @@
     - any data will be stored locally on Sqlite.
     - has graceful restart. Right now the bot uses systemd to capture kill signal and restart it.
     - interface - core integration
+    - support charts, possibly TradingView
 - User Interface
     - Minimalist no bulshit interface
     - UI will only manipulate a json file which is read by the bot during runtime. The bot will be able to run without UI.
 - Expansion to other exchanges
-    - in order : Huobi, OkEX, Binance
 - Profit calculation
 
 #### DB models
@@ -18,7 +18,13 @@
     - bot can restart trades from user's own last filled order (default = last market tick)
 
 ### Optimization
-- Adaptive strategy : Machine learning, prediction model.
+- Look for correlations
+    - Leading and lagging pairs
+    - Leading and lagging exchanges
+    - Volume changes
+    - BTC, altcoins movements
+
+- Adaptive strategy  
     - Knowing which direction the market will go can help the bot make bigger profit.
     - Eg. Big buy volume, small sell volume -> market moves to sell -> reprice sell orders at wider level
 
@@ -27,8 +33,11 @@
     - Altcoins moving in = altcoins going to go down. The only reason altcoins are entering an exchange is to be sold.
     - Need to observe exchanges' cold wallets and hot wallets.
 
-- Arbitrage
-    - buying and selling at different exchanges
+- Historical data
+    - Save historical data for top coins
+
+- Backtesting
+    - study free repos for backtesting at Github
 
 ### Arbitrage
 - Direct
@@ -37,6 +46,16 @@
 - Reserves
     - maintain fund reserves / pools at different exchanges. Buy and sell orders will draw from the respective pools.
     - need to figure out refill window.
+
+
+## Immediate projects
+- API implementations in Scala
+    - may start from CCXT
+    - in order : Huobi, OkEX, Binance
+- Database for historical data
+- Altcoins flowmap
+    - find out hot wallet / cold wallet addresses
+    
 
 #### Some resources
 - Machine learning
