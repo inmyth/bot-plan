@@ -21,14 +21,15 @@
 - Look for correlations
     - Leading and lagging pairs
     - Leading and lagging exchanges
-    - Volume changes
+    - Volume changes (100 of them, )
     - BTC, altcoins movements
+    -
 
 - Adaptive strategy  
     - Knowing which direction the market will go can help the bot make bigger profit.
     - Eg. Big buy volume, small sell volume -> market moves to sell -> reprice sell orders at wider level
 
-- Cypto flow map at big exchanges
+- Crypto flow map at big exchanges
     - BTC flowing in = altcoins are going to go up
     - Altcoins moving in = altcoins going to go down. The only reason altcoins are entering an exchange is to be sold.
     - Need to observe exchanges' cold wallets and hot wallets.
@@ -38,6 +39,13 @@
 
 - Backtesting
     - study free repos for backtesting at Github
+
+
+### News scorer
+- Score a news article given the effect it has on price
+- Cryptopanic has aggregate news articles tagged with relevant coin  
+
+
 
 ### Arbitrage
 - Direct
@@ -49,15 +57,24 @@
 
 
 ## Immediate projects
-- API implementations in Scala
-    - may start from CCXT
-    - in order : Huobi, OkEX, Binance
-- Database for historical data
+- Price data
+    - Need to investigate github, others for sources 
+- OkEx bot implementations
+    - Requires seapration of API lib
+- CCXT API implementations in Scala
+    - in order : OkEX, Binance, Huobi
 - Altcoins flowmap
     - find out hot wallet / cold wallet addresses
-    
+- Cryptopanic price tagger : tags news on price chart
+
 
 #### Some resources
+- All relevant crypto / quant resources : https://github.com/EliteQuant/EliteQuant
+- Arbitrage bot https://github.com/bitrinjani/r2
+- Arbitrage oppurtunity : https://github.com/manu354/cryptocurrency-arbitrage
+- Market making https://github.com/ctubio/Krypto-trading-bot
+
+
 - Machine learning
     - https://web.stanford.edu/class/msande448/2017/Final/Reports/gr4.pdf
     - https://papers.nips.cc/paper/4910-adaptive-market-making-via-online-learning.pdf
