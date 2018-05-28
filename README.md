@@ -46,7 +46,6 @@
 - Cryptopanic has aggregate news articles tagged with relevant coin  
 
 
-
 ### Arbitrage
 - Direct
     - fund is transferred directly for each tx through blockchain process.
@@ -57,15 +56,70 @@
 
 
 ## Immediate projects
-- Price data
-    - Need to investigate github, others for sources 
-- OkEx bot implementations
-    - Requires seapration of API lib
-- CCXT API implementations in Scala
-    - in order : OkEX, Binance, Huobi
-- Altcoins flowmap
-    - find out hot wallet / cold wallet addresses
-- Cryptopanic price tagger : tags news on price chart
+### Price, other market metrics (raw) data
+- Need to have raw data for 100 top coins at 100 top exchanges
+- This data should be public so no need to use api key 
+
+#### Historical past data 
+- Past data may not be available through api request, need to look around forums and github.
+- Cryptocompare may have some past data. 
+
+#### Current data
+- Build a real-time importer
+
+#### High-order processing
+- Produce less fine data set (seconds -> hours -> day) 
+- Produce relevant market indicator and features 
+
+### API lib in Java or Scala
+- Need to translate api libs from CCXT for exchanges of interest to Java or Scala
+- In order : OkEx, Binance, Huobi
+
+### Flow map
+- Find out the amount of coin entering and leaving an exchange
+- To do so we need to obtain **hot wallet address** for each coin at an exchange
+- Then observe the flow of each address real time
+
+#### Getting wallet address
+- The best way is ask around
+- Open an account, fund each native wallet under that account with some crypto, observe where it goes to or where the fund comes from in case of withdrawal.
+- XRP might use destination tag and associate it with a user. 
+
+### Data Visualization, general
+- Present data on Trade View. 
+
+### Bot integration
+- Integrate core elements and UI
+- Think of how to package Java jar and non-Java UI module into a standalone app
+- Think of other possibilities : offline browser app, PWA, etc
+
+### Bot core
+- trade starts from own last data. 
+    - Do, add API call for own last trade 
+- do "good enough" price level comparison
+- use it to reseed orders
+- list requirements for config
+
+### Bot UI
+- Config manipulation
+- Real time updates 
+    - trading status 
+    - charts (Trade View)
+    - other notifications
+- Manual CRUD (Create, Delete, Update) 
+- Research if Trade View cam be embedded in desktop app, how much
+
+### Bot helper
+- Graceful restart during server down is moved inside the bot. 
+- Read config change during runtime
+- API packaging. Move API classes to external lib. 
+- Embed Sqlite 
+- Store own trade data to the db 
+- Support queries from the db to UI's charts
+- Trim operation when dataset grows too large
+
+#### Cryptopanic price tagger
+- tags news on price chart
 
 
 #### Some resources
