@@ -1,6 +1,6 @@
 
-## Projects Outlines
-### Core
+# Projects Outlines
+## Core
 - Desktop App
     - bot runs from desktop directly to exchanges. We do NOT want to store or handle anyones' secret keys, api keys, passwords.
     - any data will be stored locally on Sqlite.
@@ -13,11 +13,11 @@
 - Expansion to other exchanges
 - Profit calculation
 
-#### DB models
+### DB models
 - txs
     - bot can restart trades from user's own last filled order (default = last market tick)
 
-### Optimization
+## Optimization / AI
 - Look for correlations
     - Leading and lagging pairs
     - Leading and lagging exchanges
@@ -96,7 +96,7 @@
 ### Bot core
 - trade starts from own last data. 
     - Do, add API call for own last trade 
-- do "good enough" price level comparison
+- create "good enough" price level comparison
 - use it to reseed orders
 - list requirements for config
 
@@ -118,11 +118,26 @@
 - Support queries from the db to UI's charts
 - Trim operation when dataset grows too large
 
-#### Cryptopanic price tagger
+### Cryptopanic price tagger
 - tags news on price chart
 
+## Support
+- create accounts
+- do manual 2FA
 
-#### Some resources
+
+## Other projects
+### New blockchain
+- study possibilites of forking from Bitcoin 
+
+## Staff / Office / Infra
+- rent
+- computers
+- smartphones 
+- sim cards (for different accounts)
+
+
+## Some resources
 - All relevant crypto / quant resources : https://github.com/EliteQuant/EliteQuant
 - Arbitrage bot https://github.com/bitrinjani/r2
 - Arbitrage oppurtunity : https://github.com/manu354/cryptocurrency-arbitrage
@@ -136,7 +151,8 @@
     - https://pdfs.semanticscholar.org/88d3/893855c3b54b0acfd436075122319c1dd518.pdf (has a github repo)
 
 
-####
+
+## Misc
 -  The three components
 
 Order processing costs represent a fee arising from order execution like ad-
