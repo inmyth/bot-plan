@@ -12,48 +12,45 @@
     - UI will only manipulate a json file which is read by the bot during runtime. The bot will be able to run without UI.
 - Expansion to other exchanges
 - Profit calculation
-
-### DB models
-- txs
+- Configurations
     - bot can restart trades from user's own last filled order (default = last market tick)
 
-## Optimization / AI
+## Prediction / AI
+### Adaptive Strategy
+- Knowing which direction the market will go can help the bot make bigger profit.
+- e.g. Big buy volume, small sell volume -> market moves to sell -> reprice sell orders at wider level
+
+### Trade data
 - Look for correlations
     - Leading and lagging pairs
     - Leading and lagging exchanges
-    - Volume changes (100 of them, )
-    - BTC, altcoins movements
-    -
+    - Volume changes
 
-- Adaptive strategy  
-    - Knowing which direction the market will go can help the bot make bigger profit.
-    - Eg. Big buy volume, small sell volume -> market moves to sell -> reprice sell orders at wider level
-
-- Crypto flow map at big exchanges
+- Crypto flow in and out at big exchanges
     - BTC flowing in = altcoins are going to go up
     - Altcoins moving in = altcoins going to go down. The only reason altcoins are entering an exchange is to be sold.
-    - Need to observe exchanges' cold wallets and hot wallets.
+    - Need to observe exchanges' hot wallets.
 
-- Historical data
-    - Save historical data for top coins
-
-- Backtesting
-    - study free repos for backtesting at Github
-
-
-### News scorer
-- Score a news article given the effect it has on price
+### News data
+#### News scorer
+- Score a news article
+- With the score metric, see how it impacts the market
+    - News might lag the effect since news date corresponds to publication date
+    - News might lead the effect or has long term effect (e.g. XRP's Japan-Korea real time test, Operation "Cryptosweep")
+    - News about new crypto listing seems to have big positive impact. 
+    - News about ad ban, regulation / authority crackdown, seems to have big negative impact.   
 - Cryptopanic has aggregate news articles tagged with relevant coin  
 
+### Backtesting
+- study free backtesting repos at Github
 
-### Arbitrage
+## Arbitrage
 - Direct
     - fund is transferred directly for each tx through blockchain process.
     - risk is determined by the amount of time the fund is processed
 - Reserves
     - maintain fund reserves / pools at different exchanges. Buy and sell orders will draw from the respective pools.
     - need to figure out refill window.
-
 
 ## Immediate projects
 ### Price, other market metrics (raw) data
@@ -99,6 +96,7 @@
 - create "good enough" price level comparison
 - use it to reseed orders
 - list requirements for config
+    - Need to create a config scrap repo for brainstorming
 
 ### Bot UI
 - Config manipulation
@@ -107,16 +105,18 @@
     - charts (Trade View)
     - other notifications
 - Manual CRUD (Create, Delete, Update) 
-- Research if Trade View cam be embedded in desktop app, how much
+- Research if Trade View can be embedded in desktop app, how much
+- See Haasbot for reference
 
 ### Bot helper
-- Graceful restart during server down is moved inside the bot. 
+- Restart is moved inside bot. 
 - Read config change during runtime
 - API packaging. Move API classes to external lib. 
 - Embed Sqlite 
 - Store own trade data to the db 
 - Support queries from the db to UI's charts
 - Trim operation when dataset grows too large
+- Counts how many pings and pongs taken within a time window (daily / hourly) to calculate profit
 
 ### Cryptopanic price tagger
 - tags news on price chart
@@ -125,24 +125,30 @@
 - create accounts
 - do manual 2FA
 
+## Infrastructure
+- Prepare a project at GCP
+- Put credentials at some shared doc
+    - Haasbot creds
+    - API keys
+    
 
 ## Other projects
 ### New blockchain
-- study possibilites of forking from Bitcoin 
+- study possibilities of forking from Bitcoin 
 
-## Staff / Office / Infra
+## Staff / Office
 - rent
 - computers
 - smartphones 
 - sim cards (for different accounts)
 
 
-## Some resources
+## Misc
+### Resources
 - All relevant crypto / quant resources : https://github.com/EliteQuant/EliteQuant
 - Arbitrage bot https://github.com/bitrinjani/r2
 - Arbitrage oppurtunity : https://github.com/manu354/cryptocurrency-arbitrage
 - Market making https://github.com/ctubio/Krypto-trading-bot
-
 
 - Machine learning
     - https://web.stanford.edu/class/msande448/2017/Final/Reports/gr4.pdf
@@ -150,9 +156,7 @@
     - http://webee.technion.ac.il/control/info/Projects/Students/2012/Ori%20Gil/Book/Market%20Making%20Article.pdf
     - https://pdfs.semanticscholar.org/88d3/893855c3b54b0acfd436075122319c1dd518.pdf (has a github repo)
 
-
-
-## Misc
+### Notes
 -  The three components
 
 Order processing costs represent a fee arising from order execution like ad-
