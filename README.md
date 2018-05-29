@@ -132,6 +132,27 @@
     - API keys
     
 
+## Future Projects
+### Arbitrage bot
+#### Conditions
+- Price tracker
+- Optimal path calculator
+    - check out https://github.com/manu354/cryptocurrency-arbitrage
+- Reserve refill strategy
+
+### Feature Set
+- Extracting features from raw data
+
+#### Conditions
+- Market raw data
+- News articles
+
+### Prediction / Machine Learning
+- Predicting market movement with market indicators
+
+#### Conditions
+- Feature set
+
 ## Other projects
 ### New blockchain
 - study possibilities of forking from Bitcoin 
