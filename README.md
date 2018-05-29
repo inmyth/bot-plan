@@ -206,3 +206,4 @@ volume  and  market  capitalization.
 
 On  the  other  hand,  bid-ask  spread  is
 positive correlated with the volatility of the security price.
+sss
