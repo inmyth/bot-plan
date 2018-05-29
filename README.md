@@ -142,16 +142,25 @@
 
 ### Feature Set
 - Extracting features from raw data
+- Need to list various indicators
 
 #### Conditions
 - Market raw data
 - News articles
+
 
 ### Prediction / Machine Learning
 - Predicting market movement with market indicators
 
 #### Conditions
 - Feature set
+
+### News analysis
+- Predict the sentiment of crypto news
+- Can start from https://github.com/xiamx/awesome-sentiment-analysis
+
+#### Conditions
+- Labeled news data
 
 ## Other projects
 ### New blockchain
