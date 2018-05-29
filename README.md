@@ -177,7 +177,7 @@
 ### Resources
 - All relevant crypto / quant resources : https://github.com/EliteQuant/EliteQuant
 - Arbitrage bot https://github.com/bitrinjani/r2
-- Arbitrage oppurtunity : https://github.com/manu354/cryptocurrency-arbitrage
+- Arbitrage opportunity : https://github.com/manu354/cryptocurrency-arbitrage
 - Market making https://github.com/ctubio/Krypto-trading-bot
 
 - Machine learning
@@ -189,15 +189,13 @@
 ### Notes
 -  The three components
 
-Order processing costs represent a fee arising from order execution like ad-
-ministrative cost and compensation for the market maker’s time.  
+Order processing costs represent a fee arising from order execution like administrative cost and compensation for the market maker’s time.  
 
 Inventory costs  originate  from  holding  unwanted  risky  securities  in  inventory  by  the
 market maker.  
 
 Adverse selection costs exist due to asymmetric information
-between the market maker and informed traders.  Informed traders are indi-
-viduals who are better informed about the expected price movement of the
+between the market maker and informed traders.  Informed traders are individuals who are better informed about the expected price movement of the
 underlying  security.
 
 
