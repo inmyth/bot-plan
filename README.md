@@ -37,7 +37,7 @@
 - With the score metric, see how it impacts the market
     - News might lag the effect since news date corresponds to publication date
     - News might lead the effect or has long term effect (e.g. XRP's Japan-Korea real time test, Operation "Cryptosweep")
-    - News about new crypto listing seems to have big positive impact. 
+    - News about new crypto listing seems to have big positive impact.
     - News about ad ban, regulation / authority crackdown, seems to have big negative impact.   
 - Cryptopanic has aggregate news articles tagged with relevant coin  
 
@@ -55,35 +55,43 @@
 ## Immediate projects
 ### Price, other market metrics (raw) data
 - Need to have raw data for 100 top coins at 100 top exchanges
-- This data should be public so no need to use api key 
+- This data should be public so no need to use api key
 
-#### Historical past data 
+#### Historical past data
 - Past data may not be available through api request, need to look around forums and github.
-- Cryptocompare may have some past data. 
+- Cryptocompare may have some past data.
 
 #### Current data
 - Build a real-time importer
 
 #### High-order processing
-- Produce less fine data set (seconds -> hours -> day) 
-- Produce relevant market indicator and features 
+- Produce less fine data set (seconds -> hours -> day)
+- Produce relevant market indicator and features
 
 ### API lib in Java or Scala
 - Need to translate api libs from CCXT for exchanges of interest to Java or Scala
 - In order : OkEx, Binance, Huobi
 
-### Flow map
+### Flow map, exchanges
 - Find out the amount of coin entering and leaving an exchange
 - To do so we need to obtain **hot wallet address** for each coin at an exchange
 - Then observe the flow of each address real time
 
+### Flow map, whales
+- We are focusing on NOAH https://etherscan.io/address/0x58a4884182d9e835597f405e5f258290e46ae7c2#tokentxns
+- List top largest coin holders
+- Observe transfers from and to these addresses, refresh list
+- Alert if there's a massive amount being transferred
+- Derive statistics like biggest daily transfers, biggest transfers all time, most active accounts
+
+
 #### Getting wallet address
 - The best way is ask around
 - Open an account, fund each native wallet under that account with some crypto, observe where it goes to or where the fund comes from in case of withdrawal.
-- XRP might use destination tag and associate it with a user. 
+- XRP might use destination tag and associate it with a user.
 
 ### Data Visualization, general
-- Present data on Trade View. 
+- Present data on Trade View.
 
 ### Bot integration
 - Integrate core elements and UI
@@ -91,8 +99,8 @@
 - Think of other possibilities : offline browser app, PWA, etc
 
 ### Bot core
-- trade starts from own last data. 
-    - Do, add API call for own last trade 
+- trade starts from own last data.
+    - Do, add API call for own last trade
 - create "good enough" price level comparison
 - use it to reseed orders
 - list requirements for config
@@ -100,23 +108,31 @@
 
 ### Bot UI
 - Config manipulation
-- Real time updates 
-    - trading status 
+- Real time updates
+    - trading status
     - charts (Trade View)
     - other notifications
-- Manual CRUD (Create, Delete, Update) 
+- Manual CRUD (Create, Delete, Update)
 - Research if Trade View can be embedded in desktop app, how much
 - See Haasbot for reference
 
 ### Bot helper
-- Restart is moved inside bot. 
+- Restart is moved inside bot.
 - Read config change during runtime
-- API packaging. Move API classes to external lib. 
-- Embed Sqlite 
-- Store own trade data to the db 
+- API packaging. Move API classes to external lib.
+- Embed Sqlite
+- Store own trade data to the db
 - Support queries from the db to UI's charts
 - Trim operation when dataset grows too large
 - Counts how many pings and pongs taken within a time window (daily / hourly) to calculate profit
+
+### Non-WS bot
+- Create polling to check active trades
+- Match active orders with cached orders to see which orders were consumed  
+- Exchanges :
+    - https://yobit.net/en/api/
+    - https://btc-alpha.github.io/api-docs/?python#orderbook-events
+
 
 ### Cryptopanic price tagger
 - tags news on price chart
@@ -130,7 +146,7 @@
 - Put credentials at some shared doc
     - Haasbot creds
     - API keys
-    
+
 
 ## Future Projects
 ### Arbitrage bot
@@ -164,12 +180,12 @@
 
 ## Other projects
 ### New blockchain
-- study possibilities of forking from Bitcoin 
+- study possibilities of forking from Bitcoin
 
 ## Staff / Office
 - rent
 - computers
-- smartphones 
+- smartphones
 - sim cards (for different accounts)
 
 
@@ -206,4 +222,3 @@ volume  and  market  capitalization.
 
 On  the  other  hand,  bid-ask  spread  is
 positive correlated with the volatility of the security price.
-
