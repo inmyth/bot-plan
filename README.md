@@ -127,11 +127,17 @@
 - Counts how many pings and pongs taken within a time window (daily / hourly) to calculate profit
 
 ### Non-WS bot
-- Create polling to check active trades
-- Match active orders with cached orders to see which orders were consumed  
-- Exchanges :
+
+- [x]Create polling to check active trades
+- [x]Match active orders with cached orders to see which orders were consumed  
+-Exchanges :
+    - [x] Okex
     - https://yobit.net/en/api/
     - https://btc-alpha.github.io/api-docs/?python#orderbook-events
+
+### XMM bot
+- XMM has been developed by Okun. We need to expand it to cover other exchanges
+
 
 
 ### Cryptopanic price tagger
