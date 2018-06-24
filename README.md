@@ -117,7 +117,9 @@
 - See Haasbot for reference
 
 ### Bot helper
-- Restart is moved inside bot.
+- Restart is moved inside bot (only websocket needs this, rest doesn't).
+    - Websocket needs to have cached requests which are matched everytime responds arrives (maybe a map of requestId -> request)
+    - In case of disconnect, websocket will resend the cache   
 - Read config change during runtime
 - API packaging. Move API classes to external lib.
 - Embed Sqlite
