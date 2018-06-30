@@ -99,10 +99,12 @@
 - Think of other possibilities : offline browser app, PWA, etc
 
 ### Bot core
-- trade starts from own last data.
+- [x]trade starts from own last data.
     - Do, add API call for own last trade
-- create "good enough" price level comparison
-- use it to reseed orders
+- ~~create "good enough" price level comparison, use it to reseed orders~~
+- bot needs two modes: startWhenOrderbookEmpty (lastTrade, lastOwn), startWhenOrderbookNotEmpty (clear, keep)
+- ~~if bot starts when orderbook not empty, fetch the last trades from the server and and match the orders with runtime's orders from the bot's shutdown time. The one that is missing is countered.~~
+- do getOrderInfo on all orders on the memory.  
 - list requirements for config
     - Need to create a config scrap repo for brainstorming
 
@@ -112,7 +114,7 @@
     - trading status
     - charts (Trade View)
     - other notifications
-- Manual CRUD (Create, Delete, Update)
+- Manual CRUD (Create, Delete, ~~Update~~)
 - Research if Trade View can be embedded in desktop app, how much
 - See Haasbot for reference
 
@@ -138,11 +140,10 @@
     - https://btc-alpha.github.io/api-docs/?python#orderbook-events
 
 ### XMM bot
-- XMM has been developed by Okun. We need to expand it to cover other exchanges
-
-
+- Expand it to cover other exchanges
 
 ### Cryptopanic price tagger
+probably not feasible, considering the time of publication doesn't correspond to time of movement
 - tags news on price chart
 
 ## Support
